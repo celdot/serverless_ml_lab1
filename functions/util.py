@@ -1,4 +1,5 @@
 import datetime
+import gzip
 import json
 import os
 import time
@@ -147,13 +148,11 @@ def get_pm25(aqicn_url: str, country: str, city: str, street: str, day: datetime
     """
     Returns DataFrame with air quality (pm25) as dataframe
     """
-    print("get_pm25")
     # The API endpoint URL
     url = f"{aqicn_url}/?token={AQI_API_KEY}"
 
     # Make a GET request to fetch the data from the API
     data = trigger_request(url)
-    print(data)
 
     # if we get 'Unknown station' response then retry with city in url
     if data['data'] == "Unknown station":
