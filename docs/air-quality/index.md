@@ -1,7 +1,5 @@
 # Air Quality Dashboard
 
-{% include air-quality.html %}
-
 ![Forecast](./assets/img/pm25_forecast.png)
 
 # Model Performance Monitoring
