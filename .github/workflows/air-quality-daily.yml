@@ -38,12 +38,12 @@ jobs:
           jupyter nbconvert --to notebook --execute 2_air_quality_feature_pipeline.ipynb
           jupyter nbconvert --to notebook --execute 4_air_quality_batch_inference.ipynb
 
-      # # Step 5: Commit and push generated files
-      # - name: Publish updated data to repository
-      #   uses: stefanzweifel/git-auto-commit-action@v5
-      #   with:
-      #     commit_message: "Air Quality Dashboard published"
-      #     commit_options: '--no-verify --signoff'
-      #     file_pattern: 'docs/air-quality/assets/img/*'
-      #     repository: ${{ github.repository }}
-      #     status_options: '--untracked-files=no'
+      # Step 5: Commit and push generated files
+      - name: Publish updated data to repository
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Air Quality Dashboard published"
+          commit_options: '--no-verify --signoff'
+          file_pattern: 'docs/air-quality/assets/img/*'
+          repository: ${{ github.repository }}
+          status_options: '--untracked-files=no'
