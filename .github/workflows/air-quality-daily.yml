@@ -4,6 +4,12 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '11 6 * * *'
+    - cron: '58 8 * * *'
+    - cron: '33 10 * * *'
+    - cron: '47 13 * * *'
+    - cron: '28 15 * * *'
+    - cron: '12 18 * * *'
+    - cron: '08 21 * * *'
 
 jobs:
   schedule_pipelines:
@@ -35,7 +41,11 @@ jobs:
         env:
           HOPSWORKS_API_KEY: ${{ secrets.HOPSWORKS_API_KEY }}
         run: |
+          jupyter notebook stop 8888 || true
+          jupyter notebook start --no-browser --port=8888 &
           jupyter nbconvert --to notebook --execute 2_air_quality_feature_pipeline.ipynb
+          jupyter notebook stop 8888 || true
+          jupyter notebook start --no-browser --port=8888 &
           jupyter nbconvert --to notebook --execute 4_air_quality_batch_inference.ipynb
 
       # Step 5: Commit and push generated files
