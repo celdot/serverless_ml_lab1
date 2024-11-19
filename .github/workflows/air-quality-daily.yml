@@ -53,6 +53,6 @@ jobs:
         with:
           commit_message: "Air Quality Dashboard published"
           commit_options: '--no-verify --signoff'
-          file_pattern: 'docs/air-quality/assets/img/*'
-          repository: ${{ github.repository }}
+          file_pattern: 'docs/air-quality/assets/img/*' 
+          repository: .
           status_options: '--untracked-files=no'
