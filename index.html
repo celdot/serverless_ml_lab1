@@ -1,34 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Air Quality Dashboard</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      line-height: 1.6;
-    }
-    h1 {
-      color: #2c3e50;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality Prediction Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+        section {
+            margin: 20px 0;
+        }
+        h2 {
+            color: #333;
+        }
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 80%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-  <h1>Air Quality Dashboard</h1>
-  <p>
-    <img src="docs/air-quality/assets/img/pm25_forecast.png" alt="PM2.5 Forecast">
-  </p>
+    <header>
+        <h1>Air Quality Prediction Dashboard</h1>
+        <p>Daily predictions and insights into air quality (pm25)</p>
+    </header>
 
-  <h2>Model Performance Monitoring</h2>
-  <p>1-Day Hindcast: Predictions vs Outcomes</p>
-  <p>
-    <img src="docs/air-quality/assets/img/pm25_hindcast_1day.png" alt="PM2.5 Hindcast">
-  </p>
+    <section>
+        <h2>Weekly Forecast</h2>
+        <img src="docs/air-quality/assets/img/pm25_forecast.png" alt="PM2.5 Weekly Forecast">
+    </section>
+
+    <section>
+        <h2>Model Performance Monitoring</h2>
+        <img src="docs/air-quality/assets/img/pm25_hindcast_3days.png" alt="PM25 Hindcast - Predictions vs Actual">
+    </section>
+
+    <section>
+        <h2>Feature Importance</h2>
+        <img src="/air_quality_model/images/feature_importance.png" alt="Feature Importance Graph">
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Air Quality Prediction Project</p>
+    </footer>
 </body>
 </html>

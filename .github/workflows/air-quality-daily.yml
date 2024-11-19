@@ -4,12 +4,11 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '11 6 * * *'
-    - cron: '58 8 * * *'
     - cron: '33 10 * * *'
-    - cron: '47 13 * * *'
     - cron: '28 15 * * *'
-    - cron: '12 18 * * *'
     - cron: '08 21 * * *'
+    - cron: '50 21 * * *'
+    - cron: '30 22 * * *'
 
 jobs:
   schedule_pipelines:
