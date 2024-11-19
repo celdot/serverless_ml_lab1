@@ -8,6 +8,7 @@ on:
     - cron: '28 15 * * *'
     - cron: '08 21 * * *'
     - cron: '40 23 * * *'
+    - cron: '50 23 * * *'
 
 jobs:
   schedule_pipelines:
