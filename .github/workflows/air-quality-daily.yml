@@ -4,10 +4,7 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '11 6 * * *'
-    - cron: '05 8 * * *'
     - cron: '33 10 * * *'
-    - cron: '20 13 * * *'
-    - cron: '20 14 * * *'
     - cron: '28 15 * * *'
     - cron: '08 21 * * *'
 
