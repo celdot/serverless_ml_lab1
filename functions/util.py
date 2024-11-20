@@ -313,5 +313,9 @@ def backfill_predictions_for_monitoring(weather_fg, air_quality_df, monitor_fg, 
     df["street"] = "18eme"
     df["country"] = "france"
     df["city"] = "paris"
+    df["temperature_2m_mean"] = df["temperature_2m_mean"].astype("float64")
+    df["precipitation_sum"] = df["precipitation_sum"].astype("float64")
+    df["wind_speed_10m_max"] = df["wind_speed_10m_max"].astype("float64")
+    df["wind_direction_10m_dominant"] = df["wind_direction_10m_dominant"].astype("float64")
     monitor_fg.insert(df, write_options={"wait_for_job": True})
     return hindcast_df
