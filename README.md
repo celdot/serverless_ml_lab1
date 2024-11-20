@@ -50,3 +50,7 @@ Visit the [Github Pages](https://celdot.github.io/serverless_ml_lab1) site to vi
 ## Data
 
 The data is taken from [aqicn.org](https://aqicn.org/station/france/paris/paris-18eme/) and [Open-Meteo](https://open-meteo.com/)
+
+## Bonus part
+
+Added a new feature based on a rolling window of 3 days for 'pm25' called "pm25_3days" to make the predictions
