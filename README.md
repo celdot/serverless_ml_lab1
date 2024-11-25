@@ -43,14 +43,24 @@ The assets for these visualizations are stored in the respective directories:
 
 ---
 
-## View Results
+## How to Use
 
-Visit the [Github Pages](https://celdot.github.io/serverless_ml_lab1) site to view the predictions and feature importance graphs.
+1. **Run Pipelines**:
+   - Backfill historical data (`1_air_quality_feature_backfill.ipynb`).
+   - Train the model (`3_air_quality_training_pipeline.ipynb`).
+   - Set up GitHub Actions to execute `2_air_quality_feature_pipeline.ipynb` and `4_air_quality_batch_inference.ipynb` daily.
+
+2. **View Results**:
+   - Visit the [Github Pages](https://celdot.github.io/serverless_ml_lab1) site to view the predictions and feature importance graphs.
+
+---
 
 ## Data
 
 The data is taken from [aqicn.org](https://aqicn.org/station/france/paris/paris-18eme/) and [Open-Meteo](https://open-meteo.com/)
 
-## Bonus part
+---
+
+## Improvements
 
 Added a new feature based on a rolling window of 3 days for 'pm25' called "pm25_3days" to make the predictions
